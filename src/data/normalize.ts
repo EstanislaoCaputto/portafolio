@@ -136,6 +136,7 @@ function normalizeExperience(value: unknown, used: Set<string>): ExperienceItem 
 export function emptyPortfolio(): Portfolio {
   return {
     version: 1,
+    demo: false,
     profile: normalizeProfile(null),
     projects: [],
     skills: [],
@@ -197,6 +198,7 @@ export function normalizePortfolio(input: unknown): NormalizedPortfolio {
   return {
     portfolio: {
       version: 1,
+      demo: input.demo === true,
       profile: normalizeProfile(input.profile),
       projects,
       skills,

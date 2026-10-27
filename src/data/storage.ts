@@ -6,7 +6,6 @@ export const DRAFT_KEY = 'portfolio:draft:v1';
 
 export interface LoadedPortfolio {
   portfolio: Portfolio;
-  fromSeed: boolean;
   warnings: string[];
 }
 
@@ -23,20 +22,20 @@ function getStorage(): Storage | null {
 }
 
 export function loadPortfolio(storage: Storage | null = getStorage()): LoadedPortfolio {
-  if (!storage) return { portfolio: SEED, fromSeed: true, warnings: [] };
+  if (!storage) return { portfolio: SEED, warnings: [] };
 
   try {
     const raw = storage.getItem(DRAFT_KEY);
-    if (!raw) return { portfolio: SEED, fromSeed: true, warnings: [] };
+    if (!raw) return { portfolio: SEED, warnings: [] };
 
     const { portfolio, warnings } = normalizePortfolio(JSON.parse(raw) as unknown);
     if (isPortfolioEmpty(portfolio)) {
-      return { portfolio: SEED, fromSeed: true, warnings };
+      return { portfolio: SEED, warnings };
     }
 
-    return { portfolio, fromSeed: false, warnings };
+    return { portfolio, warnings };
   } catch {
-    return { portfolio: SEED, fromSeed: true, warnings: [] };
+    return { portfolio: SEED, warnings: [] };
   }
 }
 

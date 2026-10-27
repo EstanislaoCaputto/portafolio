@@ -55,6 +55,8 @@ export interface SkillGroup {
 
 export interface Portfolio {
   version: 1;
+  /** Marca el seed como datos de ejemplo; se apaga al primer cambio. */
+  demo: boolean;
   profile: Profile;
   projects: Project[];
   skills: SkillGroup[];

@@ -18,7 +18,6 @@ describe('loadPortfolio', () => {
     const loaded = loadPortfolio();
 
     expect(loaded.portfolio).toBe(SEED);
-    expect(loaded.fromSeed).toBe(true);
   });
 
   it('recupera un borrador guardado', () => {
@@ -28,7 +27,6 @@ describe('loadPortfolio', () => {
     expect(savePortfolio(custom)).toBe(true);
 
     const loaded = loadPortfolio();
-    expect(loaded.fromSeed).toBe(false);
     expect(loaded.portfolio.profile.name).toBe('Ada Lovelace');
   });
 
@@ -37,7 +35,6 @@ describe('loadPortfolio', () => {
 
     const loaded = loadPortfolio();
     expect(loaded.portfolio).toBe(SEED);
-    expect(loaded.fromSeed).toBe(true);
   });
 
   it('vuelve al seed si el borrador está vacío', () => {

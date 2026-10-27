@@ -21,18 +21,16 @@ export default function App() {
   const { locale, t } = useI18n();
   const [loaded] = useState(loadPortfolio);
   const [portfolio, setPortfolio] = useState<Portfolio>(loaded.portfolio);
-  const [fromSeed, setFromSeed] = useState(loaded.fromSeed);
 
   const updatePortfolio = useCallback((next: Portfolio) => {
-    setPortfolio(next);
-    setFromSeed(false);
-    savePortfolio(next);
+    const published: Portfolio = { ...next, demo: false };
+    setPortfolio(published);
+    savePortfolio(published);
   }, []);
 
   const resetPortfolio = useCallback(() => {
     clearPortfolio();
     setPortfolio(SEED);
-    setFromSeed(true);
   }, []);
 
   // El scroll depende de la ruta: secciones con ancla o inicio de página.
@@ -78,7 +76,7 @@ export default function App() {
 
       <Header route={route} />
 
-      {fromSeed && route.name !== 'edit' ? <DemoBanner /> : null}
+      {portfolio.demo ? <DemoBanner /> : null}
 
       <main id="main" tabIndex={-1}>
         {route.name === 'home' ? <HomePage portfolio={portfolio} /> : null}

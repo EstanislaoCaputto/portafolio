@@ -1,9 +1,8 @@
 # Portafolio
 
-Plantilla de portafolio profesional para desarrolladores. Es **genérica**: cada persona la
-completa con sus datos y publica su propia versión. SPA bilingüe (español/inglés), tema oscuro por
-defecto y datos en JSON, pensada para que la lean personas y también sistemas automáticos de
-selección.
+Portafolio profesional bilingüe (español/inglés) de Estanislao Caputto Alekian, construido sobre una
+plantilla genérica que cada persona completa con sus datos. SPA con tema oscuro por defecto y datos
+en JSON, pensada para que la lean personas y también sistemas automáticos de selección.
 
 ![Vista previa del portafolio en tema oscuro](docs/preview.png)
 
@@ -52,7 +51,9 @@ Abrí la URL que imprime Vite (por defecto `http://localhost:5173`).
 4. En **Revisar**, descargá `portfolio.json`.
 5. Reemplazá `src/data/seed.json` con ese archivo y volvé a compilar/publicar.
 
-Mientras no reemplaces el seed vas a ver los **datos de ejemplo** con un aviso en pantalla.
+Este repositorio ya tiene los datos publicados del autor en el seed. Para usarlo como plantilla,
+reemplazá `src/data/seed.json` por el JSON de tus datos. Si un seed lleva `"demo": true`, el sitio
+muestra un aviso de datos de ejemplo hasta el primer cambio.
 
 > **LinkedIn:** no existe API pública de perfiles y scrapearlos viola sus términos. Por eso LinkedIn
 > y el email se cargan como enlaces/datos manuales; solo GitHub se importa automáticamente.

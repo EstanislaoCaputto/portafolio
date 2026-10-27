@@ -1,8 +1,16 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { beforeEach, describe, expect, it } from 'vitest';
 import App from '../App';
+import { SEED } from '../data/seed';
 import type { Locale } from '../i18n';
 import { I18nProvider } from '../i18n/I18nProvider';
+
+const firstProject = SEED.projects[0];
+const secondProject = SEED.projects[1];
+
+if (!firstProject || !secondProject) {
+  throw new Error('El seed necesita al menos dos proyectos para correr estos tests.');
+}
 
 function renderApp(initialLocale: Locale = 'es') {
   return render(
@@ -22,12 +30,25 @@ beforeEach(() => {
 });
 
 describe('App', () => {
-  it('muestra el portafolio de ejemplo en español', () => {
+  it('muestra el portafolio publicado en español', () => {
     renderApp();
 
-    expect(screen.getByRole('heading', { level: 1, name: 'Nombre Apellido' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: SEED.profile.name })).toBeInTheDocument();
+    expect(screen.getByText(`Proyectos: ${SEED.projects.length}`)).toBeInTheDocument();
+  });
+
+  it('no muestra el aviso de ejemplo si los datos son reales', () => {
+    renderApp();
+
+    expect(screen.queryByText('Datos de ejemplo')).toBeNull();
+  });
+
+  it('muestra el aviso cuando el portafolio está marcado como ejemplo', () => {
+    window.localStorage.setItem('portfolio:draft:v1', JSON.stringify({ ...SEED, demo: true }));
+
+    renderApp();
+
     expect(screen.getByText('Datos de ejemplo')).toBeInTheDocument();
-    expect(screen.getByText('Proyectos: 3')).toBeInTheDocument();
   });
 
   it('cambia de idioma sin recargar', () => {
@@ -37,25 +58,27 @@ describe('App', () => {
 
     expect(screen.getByRole('link', { name: 'Projects' })).toBeInTheDocument();
     expect(document.documentElement.lang).toBe('en');
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('Nombre Apellido');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(SEED.profile.name);
   });
 
   it('filtra proyectos por búsqueda', () => {
     renderApp();
 
-    fireEvent.change(screen.getByLabelText('Buscar'), { target: { value: 'notas' } });
+    fireEvent.change(screen.getByLabelText('Buscar'), {
+      target: { value: firstProject.name },
+    });
 
-    expect(screen.getByRole('heading', { level: 3, name: 'Notas offline' })).toBeInTheDocument();
-    expect(screen.queryByRole('heading', { level: 3, name: 'API de tareas' })).toBeNull();
+    expect(screen.getByRole('heading', { level: 3, name: firstProject.name })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { level: 3, name: secondProject.name })).toBeNull();
     expect(screen.getByText('Proyectos: 1')).toBeInTheDocument();
   });
 
   it('abre el detalle de un proyecto por URL', () => {
-    goTo('#/proyecto/api-de-tareas');
+    goTo(`#/proyecto/${firstProject.id}`);
     renderApp();
 
-    expect(screen.getByRole('heading', { level: 1, name: 'API de tareas' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { level: 2, name: 'Resultados' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: firstProject.name })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Volver a proyectos/ })).toBeInTheDocument();
   });
 
   it('muestra un mensaje si el proyecto no existe', () => {
@@ -103,8 +126,10 @@ describe('App', () => {
     fireEvent.change(screen.getByLabelText('Nombre'), { target: { value: 'Ada Lovelace' } });
 
     const stored = JSON.parse(window.localStorage.getItem('portfolio:draft:v1') ?? '{}') as {
+      demo?: boolean;
       profile?: { name?: string };
     };
     expect(stored.profile?.name).toBe('Ada Lovelace');
+    expect(stored.demo).toBe(false);
   });
 });

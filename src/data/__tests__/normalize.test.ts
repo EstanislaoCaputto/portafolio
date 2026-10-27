@@ -25,10 +25,17 @@ describe('normalizePortfolio', () => {
     const { portfolio, warnings } = normalizePortfolio(seed);
 
     expect(warnings).toEqual([]);
-    expect(portfolio.profile.name).toBe('Nombre Apellido');
+    expect(portfolio.profile.name).toBe(seed.profile.name);
+    expect(portfolio.demo).toBe(false);
     expect(portfolio.projects.length).toBeGreaterThan(0);
     expect(portfolio.skills.length).toBeGreaterThan(0);
     expect(portfolio.experience.length).toBeGreaterThan(0);
+  });
+
+  it('propaga el flag de datos de ejemplo solo cuando es true', () => {
+    expect(normalizePortfolio({ demo: true }).portfolio.demo).toBe(true);
+    expect(normalizePortfolio({}).portfolio.demo).toBe(false);
+    expect(normalizePortfolio(seed).portfolio.demo).toBe(false);
   });
 
   it('garantiza español e inglés en todos los textos del seed', () => {

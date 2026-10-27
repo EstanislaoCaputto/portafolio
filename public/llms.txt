@@ -27,5 +27,6 @@ más idiomas agregando un archivo de traducción y registrándolo.
 
 ## Nota
 
-Los datos incluidos por defecto son de ejemplo y deben reemplazarse por los del
-desarrollador real. El sitio es 100% estático: no envía datos a ningún servidor.
+El seed publicado contiene los datos del autor. Para reutilizar la plantilla, reemplazá
+`src/data/seed.json` por tus propios datos. El sitio es 100% estático: no envía datos a ningún
+servidor.

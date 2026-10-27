@@ -1,25 +1,26 @@
 {
   "version": 1,
+  "demo": false,
   "profile": {
-    "name": "Nombre Apellido",
+    "name": "Estanislao Caputto Alekian",
     "headline": {
       "es": "Desarrollador de software full stack",
       "en": "Full-stack software developer"
     },
     "bio": {
-      "es": "Construyo aplicaciones web y APIs con foco en simplicidad, accesibilidad y mantenibilidad. Disfruto convertir problemas difusos en soluciones pequeñas que funcionan.",
-      "en": "I build web applications and APIs focused on simplicity, accessibility and maintainability. I enjoy turning vague problems into small solutions that work."
+      "es": "Construyo aplicaciones web y APIs con foco en simplicidad, accesibilidad y mantenibilidad. Disfruto convertir problemas en soluciones prácticas.",
+      "en": "I build web applications and APIs with a focus on simplicity, accessibility and maintainability. I enjoy turning problems into practical solutions."
     },
-    "location": "Buenos Aires, Argentina",
-    "email": "hola@ejemplo.com",
+    "location": "Tierra del Fuego, Ushuaia, Argentina",
+    "email": "estani.caputto@gmail.com",
     "avatarUrl": "",
     "availability": {
       "es": "Abierto a nuevas oportunidades",
       "en": "Open to new opportunities"
     },
     "links": {
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/in/",
+      "github": "https://github.com/EstanislaoCaputto",
+      "linkedin": "https://www.linkedin.com/in/estanislao-caputto-alekian-19556b191/",
       "website": ""
     }
   },
@@ -90,48 +91,52 @@
       "year": 2023,
       "repoUrl": "https://github.com/",
       "demoUrl": "",
-      "featured": false
+      "featured": true
     }
   ],
   "skills": [
     {
       "id": "lenguajes",
-      "label": { "es": "Lenguajes", "en": "Languages" },
+      "label": {
+        "es": "Lenguajes",
+        "en": "Languages"
+      },
       "items": ["TypeScript", "Python", "SQL", "Rust"]
     },
     {
       "id": "frontend",
-      "label": { "es": "Frontend", "en": "Frontend" },
+      "label": {
+        "es": "Frontend",
+        "en": "Frontend"
+      },
       "items": ["React", "Semantic HTML", "Modern CSS", "Accessibility"]
     },
     {
       "id": "backend",
-      "label": { "es": "Backend y datos", "en": "Backend & data" },
-      "items": ["Node.js", "FastAPI", "PostgreSQL", "Redis"]
+      "label": {
+        "es": "Backend y datos",
+        "en": "Backend & data"
+      },
+      "items": ["Node.js", "FastAPI", "PostgreSQL", "Redis", "Next.js"]
     },
     {
       "id": "herramientas",
-      "label": { "es": "Herramientas", "en": "Tooling" },
+      "label": {
+        "es": "Herramientas",
+        "en": "Tooling"
+      },
       "items": ["Git", "Docker", "GitHub Actions", "Linux"]
     }
   ],
   "experience": [
     {
-      "id": "desarrollador-full-stack",
-      "kind": "work",
-      "role": { "es": "Desarrollador full stack", "en": "Full-stack developer" },
-      "organization": "Empresa de ejemplo",
-      "period": "2023 — Presente",
-      "summary": {
-        "es": "Desarrollo de funcionalidades de punta a punta, revisión de código y mejoras de rendimiento en una aplicación usada por miles de personas.",
-        "en": "End-to-end feature development, code review and performance improvements in an application used by thousands of people."
-      }
-    },
-    {
       "id": "desarrollador-backend",
       "kind": "work",
-      "role": { "es": "Desarrollador backend", "en": "Backend developer" },
-      "organization": "Startup de ejemplo",
+      "role": {
+        "es": "Desarrollador backend",
+        "en": "Backend developer"
+      },
+      "organization": "Telemercado SRL",
       "period": "2021 — 2023",
       "summary": {
         "es": "Diseño e implementación de APIs, integraciones con servicios externos y automatización de despliegues.",
@@ -141,9 +146,12 @@
     {
       "id": "licenciatura-en-sistemas",
       "kind": "education",
-      "role": { "es": "Licenciatura en Sistemas", "en": "BSc in Computer Systems" },
-      "organization": "Universidad de ejemplo",
-      "period": "2017 — 2021",
+      "role": {
+        "es": "Licenciatura en Sistemas",
+        "en": "BSc in Computer Systems"
+      },
+      "organization": "CoderHouse",
+      "period": "2019 — 2021",
       "summary": {
         "es": "Formación en algoritmos, bases de datos, redes y ingeniería de software.",
         "en": "Coursework in algorithms, databases, networks and software engineering."
