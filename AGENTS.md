@@ -28,8 +28,10 @@ Bases específicas de este proyecto. Hereda las reglas de `../AGENTS.md` y solo 
   `src/i18n/index.ts`, sin tocar componentes.
 - **Datos del usuario solo en `src/data/seed.json` o en `localStorage`.** No agregar backend, base de
   datos ni analytics.
-- **La única llamada de red permitida** es `api.github.com` desde el paso de importación (API pública,
-  sin token). Cualquier otra integración externa requiere ADR.
+- **La única llamada de red permitida desde la app** es `api.github.com` en el paso de importación
+  (API pública, sin token). El script `scripts/sync-github.mjs` puede consultar GitHub mediante `gh`
+  (sesión local del desarrollador) para actualizar `projects`; no corre en build ni en CI. Cualquier
+  otra integración externa requiere ADR.
 - **Tema oscuro por defecto.** Todo color nuevo entra como token en `tokens.css` con su variante clara;
   no usar valores hex sueltos en `components.css`.
 - **Rutas solo por hash** (`#/`, `#/proyecto/:id`, `#/datos`, `#/editar`). No introducir router: GitHub

@@ -30,16 +30,17 @@ Abrí la URL que imprime Vite (por defecto `http://localhost:5173`).
 
 ## Comandos
 
-| Comando             | Qué hace                                             |
-| ------------------- | ---------------------------------------------------- |
-| `npm run dev`       | Servidor de desarrollo con recarga en caliente       |
-| `npm run build`     | Typecheck + build de producción en `dist/`           |
-| `npm run preview`   | Sirve el build localmente                            |
-| `npm run lint`      | ESLint                                               |
-| `npm run typecheck` | TypeScript sin emitir                                |
-| `npm test`          | Suite de Vitest                                      |
-| `npm run format`    | Prettier sobre todo el proyecto                      |
-| `npm run check`     | Lint + tipos + tests + build (lo mismo que corre CI) |
+| Comando               | Qué hace                                                 |
+| --------------------- | -------------------------------------------------------- |
+| `npm run dev`         | Servidor de desarrollo con recarga en caliente           |
+| `npm run build`       | Typecheck + build de producción en `dist/`               |
+| `npm run preview`     | Sirve el build localmente                                |
+| `npm run lint`        | ESLint                                                   |
+| `npm run typecheck`   | TypeScript sin emitir                                    |
+| `npm test`            | Suite de Vitest                                          |
+| `npm run format`      | Prettier sobre todo el proyecto                          |
+| `npm run sync:github` | Reemplaza los proyectos con tus repos públicos de GitHub |
+| `npm run check`       | Lint + tipos + tests + build (lo mismo que corre CI)     |
 
 ## Completar tus datos
 
@@ -57,6 +58,28 @@ muestra un aviso de datos de ejemplo hasta el primer cambio.
 
 > **LinkedIn:** no existe API pública de perfiles y scrapearlos viola sus términos. Por eso LinkedIn
 > y el email se cargan como enlaces/datos manuales; solo GitHub se importa automáticamente.
+
+## Sincronizar tus repositorios de GitHub
+
+Con `gh` instalado y autenticado, podés reemplazar la lista de proyectos con **todos tus repositorios
+públicos** de una vez:
+
+```bash
+npm run sync:github             # escribe src/data/seed.json
+npm run sync:github -- --dry-run  # muestra el resultado sin escribir
+```
+
+El script (`scripts/sync-github.mjs`) consulta `gh repo list` y:
+
+- incluye solo repos **públicos**, sin forks, archivados ni templates;
+- ordena por último push, hasta 50 proyectos;
+- usa la descripción de GitHub en ambos idiomas (si falta, genera una genérica);
+- toma lenguaje y topics como tecnologías, y la home del repo como demo;
+- **reemplaza `projects`** y conserva perfil, habilidades y experiencia;
+- no se ejecuta en build ni en CI: es una herramienta local.
+
+Los repos privados quedan afuera porque sus enlaces no serían visibles en el sitio publicado.
+Después de sincronizar, corré `npm run check` y hacé commit/push para publicar.
 
 ## Publicar en GitHub Pages
 

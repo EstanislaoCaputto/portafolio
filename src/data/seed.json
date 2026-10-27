@@ -26,72 +26,184 @@
   },
   "projects": [
     {
-      "id": "api-de-tareas",
-      "name": "API de tareas",
+      "id": "portafolio",
+      "name": "Portafolio",
       "summary": {
-        "es": "API REST con autenticación, filtros y tests de integración.",
-        "en": "REST API with authentication, filtering and integration tests."
+        "es": "Portafolio profesional bilingüe (ES/EN) con React + TypeScript, tema oscuro y datos en JSON.",
+        "en": "Portafolio profesional bilingüe (ES/EN) con React + TypeScript, tema oscuro y datos en JSON."
       },
       "description": {
-        "es": "Servicio backend para gestionar tareas y equipos. Incluye autenticación con JWT, permisos por proyecto, paginación y una suite de tests que corre en CI contra una base de datos real.",
-        "en": "Backend service to manage tasks and teams. It includes JWT authentication, per-project permissions, pagination and a test suite that runs in CI against a real database."
-      },
-      "highlights": [
-        {
-          "es": "Reduje el tiempo de respuesta del listado principal de 900 ms a 120 ms con índices y paginación.",
-          "en": "Reduced the main listing response time from 900 ms to 120 ms using indexes and pagination."
-        },
-        {
-          "es": "Cobertura de tests del 85% en los módulos de autenticación y permisos.",
-          "en": "85% test coverage on the authentication and permissions modules."
-        }
-      ],
-      "tech": ["TypeScript", "Node.js", "PostgreSQL", "Docker"],
-      "year": 2025,
-      "repoUrl": "https://github.com/",
-      "demoUrl": "",
-      "featured": true
-    },
-    {
-      "id": "panel-de-metricas",
-      "name": "Panel de métricas",
-      "summary": {
-        "es": "Dashboard en tiempo real para visualizar métricas de producto.",
-        "en": "Real-time dashboard to visualize product metrics."
-      },
-      "description": {
-        "es": "Interfaz que consume un flujo de eventos y muestra gráficos filtrables por rango de fechas. Pensada para pantallas grandes y para leer rápido en el móvil.",
-        "en": "Interface that consumes an event stream and renders charts filterable by date range. Designed for large screens and quick reading on mobile."
-      },
-      "highlights": [
-        {
-          "es": "Componentes accesibles por teclado y compatibles con lectores de pantalla.",
-          "en": "Keyboard-accessible components compatible with screen readers."
-        }
-      ],
-      "tech": ["React", "TypeScript", "Vite", "SVG"],
-      "year": 2024,
-      "repoUrl": "https://github.com/",
-      "demoUrl": "",
-      "featured": true
-    },
-    {
-      "id": "notas-offline",
-      "name": "Notas offline",
-      "summary": {
-        "es": "Aplicación de notas que funciona sin conexión y sincroniza al volver.",
-        "en": "Notes application that works offline and syncs when back online."
-      },
-      "description": {
-        "es": "PWA con almacenamiento local, búsqueda instantánea y sincronización diferida. El objetivo era que escribir una nota nunca dependiera de la red.",
-        "en": "PWA with local storage, instant search and deferred sync. The goal was that writing a note never depended on the network."
+        "es": "Portafolio profesional bilingüe (ES/EN) con React + TypeScript, tema oscuro y datos en JSON.",
+        "en": "Portafolio profesional bilingüe (ES/EN) con React + TypeScript, tema oscuro y datos en JSON."
       },
       "highlights": [],
-      "tech": ["React", "IndexedDB", "Service Worker"],
+      "tech": ["TypeScript", "i18n", "portfolio", "react"],
+      "year": 2026,
+      "repoUrl": "https://github.com/EstanislaoCaputto/portafolio",
+      "demoUrl": "https://estanislaocaputto.github.io/portafolio/",
+      "featured": false
+    },
+    {
+      "id": "rick-and-morty-react",
+      "name": "Rick and Morty React",
+      "summary": {
+        "es": "Practicando React consumiendo la API de Rick and Morty",
+        "en": "Practicando React consumiendo la API de Rick and Morty"
+      },
+      "description": {
+        "es": "Practicando React consumiendo la API de Rick and Morty",
+        "en": "Practicando React consumiendo la API de Rick and Morty"
+      },
+      "highlights": [],
+      "tech": ["JavaScript"],
       "year": 2023,
-      "repoUrl": "https://github.com/",
+      "repoUrl": "https://github.com/EstanislaoCaputto/Rick-and-Morty-React",
       "demoUrl": "",
-      "featured": true
+      "featured": false
+    },
+    {
+      "id": "api-typescript",
+      "name": "API TypeScript",
+      "summary": {
+        "es": "API REST creada en TypeScript",
+        "en": "API REST creada en TypeScript"
+      },
+      "description": {
+        "es": "API REST creada en TypeScript",
+        "en": "API REST creada en TypeScript"
+      },
+      "highlights": [],
+      "tech": ["TypeScript"],
+      "year": 2023,
+      "repoUrl": "https://github.com/EstanislaoCaputto/API-TypeScript",
+      "demoUrl": "",
+      "featured": false
+    },
+    {
+      "id": "codificador",
+      "name": "Codificador",
+      "summary": {
+        "es": "Programa web para cifrar y decifrar",
+        "en": "Programa web para cifrar y decifrar"
+      },
+      "description": {
+        "es": "Programa web para cifrar y decifrar",
+        "en": "Programa web para cifrar y decifrar"
+      },
+      "highlights": [],
+      "tech": ["JavaScript", "challengeonecodificador4"],
+      "year": 2022,
+      "repoUrl": "https://github.com/EstanislaoCaputto/codificador",
+      "demoUrl": "",
+      "featured": false
+    },
+    {
+      "id": "entregafinalpt2",
+      "name": "EntregaFinalPt2",
+      "summary": {
+        "es": "Proyecto desarrollado con JavaScript.",
+        "en": "Project built with JavaScript."
+      },
+      "description": {
+        "es": "Proyecto desarrollado con JavaScript.",
+        "en": "Project built with JavaScript."
+      },
+      "highlights": [],
+      "tech": ["JavaScript"],
+      "year": 2022,
+      "repoUrl": "https://github.com/EstanislaoCaputto/entregaFinalPt2",
+      "demoUrl": "",
+      "featured": false
+    },
+    {
+      "id": "servidor-express",
+      "name": "Servidor express",
+      "summary": {
+        "es": "Proyecto de back-end para CoderHouse",
+        "en": "Proyecto de back-end para CoderHouse"
+      },
+      "description": {
+        "es": "Proyecto de back-end para CoderHouse",
+        "en": "Proyecto de back-end para CoderHouse"
+      },
+      "highlights": [],
+      "tech": ["JavaScript"],
+      "year": 2021,
+      "repoUrl": "https://github.com/EstanislaoCaputto/servidor-express",
+      "demoUrl": "",
+      "featured": false
+    },
+    {
+      "id": "chatchat",
+      "name": "ChatChat",
+      "summary": {
+        "es": "Proyecto desarrollado con JavaScript.",
+        "en": "Project built with JavaScript."
+      },
+      "description": {
+        "es": "Proyecto desarrollado con JavaScript.",
+        "en": "Project built with JavaScript."
+      },
+      "highlights": [],
+      "tech": ["JavaScript"],
+      "year": 2021,
+      "repoUrl": "https://github.com/EstanislaoCaputto/chatChat",
+      "demoUrl": "",
+      "featured": false
+    },
+    {
+      "id": "cuadernosco",
+      "name": "Cuadernosco",
+      "summary": {
+        "es": "e-commers de cuadernos artesanales(proyecto react CoderHouse)",
+        "en": "e-commers de cuadernos artesanales(proyecto react CoderHouse)"
+      },
+      "description": {
+        "es": "e-commers de cuadernos artesanales(proyecto react CoderHouse)",
+        "en": "e-commers de cuadernos artesanales(proyecto react CoderHouse)"
+      },
+      "highlights": [],
+      "tech": ["JavaScript"],
+      "year": 2021,
+      "repoUrl": "https://github.com/EstanislaoCaputto/cuadernosco",
+      "demoUrl": "",
+      "featured": false
+    },
+    {
+      "id": "proyecto-js",
+      "name": "Proyecto JS",
+      "summary": {
+        "es": "Proyecto desarrollado con HTML.",
+        "en": "Project built with HTML."
+      },
+      "description": {
+        "es": "Proyecto desarrollado con HTML.",
+        "en": "Project built with HTML."
+      },
+      "highlights": [],
+      "tech": ["HTML"],
+      "year": 2021,
+      "repoUrl": "https://github.com/EstanislaoCaputto/Proyecto-JS",
+      "demoUrl": "",
+      "featured": false
+    },
+    {
+      "id": "tomacoweb",
+      "name": "Tomacoweb",
+      "summary": {
+        "es": "Tienda de Tabacos Online",
+        "en": "Tienda de Tabacos Online"
+      },
+      "description": {
+        "es": "Tienda de Tabacos Online",
+        "en": "Tienda de Tabacos Online"
+      },
+      "highlights": [],
+      "tech": ["HTML"],
+      "year": 2021,
+      "repoUrl": "https://github.com/EstanislaoCaputto/tomacoweb",
+      "demoUrl": "",
+      "featured": false
     }
   ],
   "skills": [
