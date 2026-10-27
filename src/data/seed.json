@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "profile": {
+    "name": "Nombre Apellido",
+    "headline": {
+      "es": "Desarrollador de software full stack",
+      "en": "Full-stack software developer"
+    },
+    "bio": {
+      "es": "Construyo aplicaciones web y APIs con foco en simplicidad, accesibilidad y mantenibilidad. Disfruto convertir problemas difusos en soluciones pequeñas que funcionan.",
+      "en": "I build web applications and APIs focused on simplicity, accessibility and maintainability. I enjoy turning vague problems into small solutions that work."
+    },
+    "location": "Buenos Aires, Argentina",
+    "email": "hola@ejemplo.com",
+    "avatarUrl": "",
+    "availability": {
+      "es": "Abierto a nuevas oportunidades",
+      "en": "Open to new opportunities"
+    },
+    "links": {
+      "github": "https://github.com/",
+      "linkedin": "https://www.linkedin.com/in/",
+      "website": ""
+    }
+  },
+  "projects": [
+    {
+      "id": "api-de-tareas",
+      "name": "API de tareas",
+      "summary": {
+        "es": "API REST con autenticación, filtros y tests de integración.",
+        "en": "REST API with authentication, filtering and integration tests."
+      },
+      "description": {
+        "es": "Servicio backend para gestionar tareas y equipos. Incluye autenticación con JWT, permisos por proyecto, paginación y una suite de tests que corre en CI contra una base de datos real.",
+        "en": "Backend service to manage tasks and teams. It includes JWT authentication, per-project permissions, pagination and a test suite that runs in CI against a real database."
+      },
+      "highlights": [
+        {
+          "es": "Reduje el tiempo de respuesta del listado principal de 900 ms a 120 ms con índices y paginación.",
+          "en": "Reduced the main listing response time from 900 ms to 120 ms using indexes and pagination."
+        },
+        {
+          "es": "Cobertura de tests del 85% en los módulos de autenticación y permisos.",
+          "en": "85% test coverage on the authentication and permissions modules."
+        }
+      ],
+      "tech": ["TypeScript", "Node.js", "PostgreSQL", "Docker"],
+      "year": 2025,
+      "repoUrl": "https://github.com/",
+      "demoUrl": "",
+      "featured": true
+    },
+    {
+      "id": "panel-de-metricas",
+      "name": "Panel de métricas",
+      "summary": {
+        "es": "Dashboard en tiempo real para visualizar métricas de producto.",
+        "en": "Real-time dashboard to visualize product metrics."
+      },
+      "description": {
+        "es": "Interfaz que consume un flujo de eventos y muestra gráficos filtrables por rango de fechas. Pensada para pantallas grandes y para leer rápido en el móvil.",
+        "en": "Interface that consumes an event stream and renders charts filterable by date range. Designed for large screens and quick reading on mobile."
+      },
+      "highlights": [
+        {
+          "es": "Componentes accesibles por teclado y compatibles con lectores de pantalla.",
+          "en": "Keyboard-accessible components compatible with screen readers."
+        }
+      ],
+      "tech": ["React", "TypeScript", "Vite", "SVG"],
+      "year": 2024,
+      "repoUrl": "https://github.com/",
+      "demoUrl": "",
+      "featured": true
+    },
+    {
+      "id": "notas-offline",
+      "name": "Notas offline",
+      "summary": {
+        "es": "Aplicación de notas que funciona sin conexión y sincroniza al volver.",
+        "en": "Notes application that works offline and syncs when back online."
+      },
+      "description": {
+        "es": "PWA con almacenamiento local, búsqueda instantánea y sincronización diferida. El objetivo era que escribir una nota nunca dependiera de la red.",
+        "en": "PWA with local storage, instant search and deferred sync. The goal was that writing a note never depended on the network."
+      },
+      "highlights": [],
+      "tech": ["React", "IndexedDB", "Service Worker"],
+      "year": 2023,
+      "repoUrl": "https://github.com/",
+      "demoUrl": "",
+      "featured": false
+    }
+  ],
+  "skills": [
+    {
+      "id": "lenguajes",
+      "label": { "es": "Lenguajes", "en": "Languages" },
+      "items": ["TypeScript", "Python", "SQL", "Rust"]
+    },
+    {
+      "id": "frontend",
+      "label": { "es": "Frontend", "en": "Frontend" },
+      "items": ["React", "Semantic HTML", "Modern CSS", "Accessibility"]
+    },
+    {
+      "id": "backend",
+      "label": { "es": "Backend y datos", "en": "Backend & data" },
+      "items": ["Node.js", "FastAPI", "PostgreSQL", "Redis"]
+    },
+    {
+      "id": "herramientas",
+      "label": { "es": "Herramientas", "en": "Tooling" },
+      "items": ["Git", "Docker", "GitHub Actions", "Linux"]
+    }
+  ],
+  "experience": [
+    {
+      "id": "desarrollador-full-stack",
+      "kind": "work",
+      "role": { "es": "Desarrollador full stack", "en": "Full-stack developer" },
+      "organization": "Empresa de ejemplo",
+      "period": "2023 — Presente",
+      "summary": {
+        "es": "Desarrollo de funcionalidades de punta a punta, revisión de código y mejoras de rendimiento en una aplicación usada por miles de personas.",
+        "en": "End-to-end feature development, code review and performance improvements in an application used by thousands of people."
+      }
+    },
+    {
+      "id": "desarrollador-backend",
+      "kind": "work",
+      "role": { "es": "Desarrollador backend", "en": "Backend developer" },
+      "organization": "Startup de ejemplo",
+      "period": "2021 — 2023",
+      "summary": {
+        "es": "Diseño e implementación de APIs, integraciones con servicios externos y automatización de despliegues.",
+        "en": "API design and implementation, third-party integrations and deployment automation."
+      }
+    },
+    {
+      "id": "licenciatura-en-sistemas",
+      "kind": "education",
+      "role": { "es": "Licenciatura en Sistemas", "en": "BSc in Computer Systems" },
+      "organization": "Universidad de ejemplo",
+      "period": "2017 — 2021",
+      "summary": {
+        "es": "Formación en algoritmos, bases de datos, redes y ingeniería de software.",
+        "en": "Coursework in algorithms, databases, networks and software engineering."
+      }
+    }
+  ]
+}

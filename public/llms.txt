@@ -1,0 +1,31 @@
+# Portafolio de desarrollo de software
+
+> Portafolio profesional estático de un desarrollador de software. SPA bilingüe
+> (español e inglés) con datos en JSON, pensada para lectura humana y automática.
+
+## Cómo leer este sitio
+
+- La página principal (`/`) contiene perfil, proyectos, habilidades, experiencia y contacto.
+- Cada proyecto tiene una URL estable: `/#/proyecto/<id>`.
+- Los datos completos están en `/#/datos` y en el archivo estático `/portfolio.json`.
+- Los metadatos están publicados como schema.org `Person` en JSON-LD dentro del HTML.
+
+## Estructura de los datos
+
+- `profile`: nombre, titular profesional, biografía, ubicación, email y enlaces.
+- `projects`: proyectos con resumen, descripción, resultados, tecnologías, año y enlaces.
+- `skills`: grupos de habilidades con etiqueta y elementos.
+- `experience`: trabajos y formación con rol, organización, período y descripción.
+
+Todos los textos localizados usan un objeto `{ "es": …, "en": … }`; si un idioma
+falta, se muestra el español.
+
+## Idiomas
+
+Español (`es`) e inglés (`en`) son obligatorios. El sitio puede extenderse con
+más idiomas agregando un archivo de traducción y registrándolo.
+
+## Nota
+
+Los datos incluidos por defecto son de ejemplo y deben reemplazarse por los del
+desarrollador real. El sitio es 100% estático: no envía datos a ningún servidor.
