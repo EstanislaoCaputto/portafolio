@@ -26,6 +26,60 @@
   },
   "projects": [
     {
+      "id": "rick-and-morty-react",
+      "name": "Rick and Morty React",
+      "summary": {
+        "es": "Practicando React consumiendo la API de Rick and Morty",
+        "en": "Practicando React consumiendo la API de Rick and Morty"
+      },
+      "description": {
+        "es": "Practicando React consumiendo la API de Rick and Morty",
+        "en": "Practicando React consumiendo la API de Rick and Morty"
+      },
+      "highlights": [],
+      "tech": ["JavaScript"],
+      "year": 2026,
+      "repoUrl": "https://github.com/EstanislaoCaputto/Rick-and-Morty-React",
+      "demoUrl": "",
+      "featured": false
+    },
+    {
+      "id": "cuadernosco",
+      "name": "Cuadernosco",
+      "summary": {
+        "es": "Deprecado — la versión vigente es la reconstrucción v2 (Next.js 16 + MongoDB). Proyecto original CRA + Firebase (2021), solo registro histórico.",
+        "en": "Deprecado — la versión vigente es la reconstrucción v2 (Next.js 16 + MongoDB). Proyecto original CRA + Firebase (2021), solo registro histórico."
+      },
+      "description": {
+        "es": "Deprecado — la versión vigente es la reconstrucción v2 (Next.js 16 + MongoDB). Proyecto original CRA + Firebase (2021), solo registro histórico.",
+        "en": "Deprecado — la versión vigente es la reconstrucción v2 (Next.js 16 + MongoDB). Proyecto original CRA + Firebase (2021), solo registro histórico."
+      },
+      "highlights": [],
+      "tech": ["JavaScript"],
+      "year": 2026,
+      "repoUrl": "https://github.com/EstanislaoCaputto/cuadernosco",
+      "demoUrl": "",
+      "featured": false
+    },
+    {
+      "id": "tomacoweb",
+      "name": "Tomacoweb",
+      "summary": {
+        "es": "Tienda de Tabacos Online",
+        "en": "Tienda de Tabacos Online"
+      },
+      "description": {
+        "es": "Tienda de Tabacos Online",
+        "en": "Tienda de Tabacos Online"
+      },
+      "highlights": [],
+      "tech": ["HTML"],
+      "year": 2026,
+      "repoUrl": "https://github.com/EstanislaoCaputto/tomacoweb",
+      "demoUrl": "",
+      "featured": false
+    },
+    {
       "id": "portafolio",
       "name": "Portafolio",
       "summary": {
@@ -41,42 +95,6 @@
       "year": 2026,
       "repoUrl": "https://github.com/EstanislaoCaputto/portafolio",
       "demoUrl": "https://estanislaocaputto.github.io/portafolio/",
-      "featured": false
-    },
-    {
-      "id": "rick-and-morty-react",
-      "name": "Rick and Morty React",
-      "summary": {
-        "es": "Practicando React consumiendo la API de Rick and Morty",
-        "en": "Practicando React consumiendo la API de Rick and Morty"
-      },
-      "description": {
-        "es": "Practicando React consumiendo la API de Rick and Morty",
-        "en": "Practicando React consumiendo la API de Rick and Morty"
-      },
-      "highlights": [],
-      "tech": ["JavaScript"],
-      "year": 2023,
-      "repoUrl": "https://github.com/EstanislaoCaputto/Rick-and-Morty-React",
-      "demoUrl": "",
-      "featured": false
-    },
-    {
-      "id": "api-typescript",
-      "name": "API TypeScript",
-      "summary": {
-        "es": "API REST creada en TypeScript",
-        "en": "API REST creada en TypeScript"
-      },
-      "description": {
-        "es": "API REST creada en TypeScript",
-        "en": "API REST creada en TypeScript"
-      },
-      "highlights": [],
-      "tech": ["TypeScript"],
-      "year": 2023,
-      "repoUrl": "https://github.com/EstanislaoCaputto/API-TypeScript",
-      "demoUrl": "",
       "featured": false
     },
     {
@@ -152,24 +170,6 @@
       "featured": false
     },
     {
-      "id": "cuadernosco",
-      "name": "Cuadernosco",
-      "summary": {
-        "es": "e-commers de cuadernos artesanales(proyecto react CoderHouse)",
-        "en": "e-commers de cuadernos artesanales(proyecto react CoderHouse)"
-      },
-      "description": {
-        "es": "e-commers de cuadernos artesanales(proyecto react CoderHouse)",
-        "en": "e-commers de cuadernos artesanales(proyecto react CoderHouse)"
-      },
-      "highlights": [],
-      "tech": ["JavaScript"],
-      "year": 2021,
-      "repoUrl": "https://github.com/EstanislaoCaputto/cuadernosco",
-      "demoUrl": "",
-      "featured": false
-    },
-    {
       "id": "proyecto-js",
       "name": "Proyecto JS",
       "summary": {
@@ -184,24 +184,6 @@
       "tech": ["HTML"],
       "year": 2021,
       "repoUrl": "https://github.com/EstanislaoCaputto/Proyecto-JS",
-      "demoUrl": "",
-      "featured": false
-    },
-    {
-      "id": "tomacoweb",
-      "name": "Tomacoweb",
-      "summary": {
-        "es": "Tienda de Tabacos Online",
-        "en": "Tienda de Tabacos Online"
-      },
-      "description": {
-        "es": "Tienda de Tabacos Online",
-        "en": "Tienda de Tabacos Online"
-      },
-      "highlights": [],
-      "tech": ["HTML"],
-      "year": 2021,
-      "repoUrl": "https://github.com/EstanislaoCaputto/tomacoweb",
       "demoUrl": "",
       "featured": false
     }
